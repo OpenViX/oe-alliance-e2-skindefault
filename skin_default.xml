@@ -1249,7 +1249,7 @@
 		<widget source="TunerHeader" render="Label" position="10*f,82*f" size="660*f,25*f" font="Bold;20*f" transparent="0" zPosition="1"/>
 		<widget source="nims" render="Label" position="10*f,108*f" size="660*f,200*f" font="Regular;18*f" transparent="0" zPosition="1" noWrap="1"/>
 		<widget source="HDDHeader" render="Label" position="10*f,332*f" size="660*f,25*f" font="Bold;20*f" transparent="0" zPosition="1"/>
-		<widget source="hdd" render="Label" position="10*f,358*f" size="660*f,200" font="Regular;18*f" transparent="0" zPosition="1" noWrap="1"/>
+		<widget source="hdd" render="Label" position="10*f,358*f" size="660*f,200*f" font="Regular;18*f" transparent="0" zPosition="1" noWrap="1"/>
 		<widget source="MountsHeader" render="Label" position="10*f,482*f" size="660*f,25*f" font="Bold;20*f" transparent="0" zPosition="1"/>
 		<widget source="mounts" render="Label" position="10*f,508*f" size="660*f,130*f" font="Regular;18*f" transparent="0" zPosition="1" noWrap="1"/>
 	</screen>
