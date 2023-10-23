@@ -1995,6 +1995,7 @@ self.autoResize()
 		<widget name="text" position="70*f,82*f" size="600*f,510*f" font="Regular;22*f"/>
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="10*f,82*f" size="53*f,53*f" alphatest="blend"/>
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="10*f,82*f" size="53*f,53*f" alphatest="blend"/>
+		<widget name="WarningPixmap" pixmap="icons/input_warning.png" position="10*f,82*f" size="53*f,53*f" alphatest="blend"/>
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="10*f,82*f" size="53*f,53*f" alphatest="blend"/>
 		<!-- widget name="list" position="695*f,410*f" size="575*f,234*f" itemHeight="26*f" font="Regular;20*f" scrollbarMode="showOnDemand"/ -->
 		<widget name="list" position="10*f,650*f" size="660*f,0" itemHeight="26*f" font="Regular;20*f" scrollbarMode="showOnDemand"/>
