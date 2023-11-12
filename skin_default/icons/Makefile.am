@@ -173,4 +173,9 @@ dist_install_DATA = \
     verticalline.png \
     verticalline-plugins.png \
     YPbPr.png \
-    za.png
+    za.png \
+    ico_hd-fs8.png \
+    ico_sd-fs8.png \
+    ico_uhd-fs8.png \
+    ico_catchup-fs8.png \
+    ico_altref-fs8.png
