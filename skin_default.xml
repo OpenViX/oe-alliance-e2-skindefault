@@ -1450,12 +1450,6 @@
 		<panel name="__PigTemplate__"/>
 		<panel name="__MenuListTemplate__"/>
 	</screen>
-	<screen name="MovieContextMenu" position="fill" flags="wfNoBorder">
-		<panel name="__PigTemplate__"/>
-		<panel name="__MenuListTemplate__"/>
-		<eLabel text="Movielist menu" position="130*f,25*f" size="740*f,43*f" font="Boldit;32*f" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" 
-			backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1"/>
-	</screen>
 	<screen name="ChannelSelection" position="fill" flags="wfNoBorder">
 		<panel name="__PigTemplate__" />
 		<widget name="list" position="10*f,82*f" size="660*f,570*f" backgroundColor="black" foregroundColorEvent="event-frgrnd" 
