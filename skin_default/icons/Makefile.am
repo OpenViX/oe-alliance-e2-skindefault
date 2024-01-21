@@ -94,6 +94,8 @@ dist_install_DATA = \
     input_rcold-configured.png \
     input_rcold.png \
     input_warning.svg \
+    installable.png \
+    installed.png \
     lcd_DVI.png \
     lcd_HDMI.png \
     lcd_Scart.png \
@@ -145,6 +147,7 @@ dist_install_DATA = \
     RCA.png \
     record.png \
     redx.png \
+    remove.png \
     rep.png \
     scan-c.png \
     scan-s.png \
@@ -170,6 +173,8 @@ dist_install_DATA = \
     unhandled-key.png \
     unlock.png \
     unlockBouquet.png \
+    upgrade.png \
+    upgradeable.png \
     verticalline.png \
     verticalline-plugins.png \
     YPbPr.png \
