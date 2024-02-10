@@ -359,10 +359,10 @@
 
 		<!-- Yellow button text -->
 		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" backgroundColor="key_yellow"
-			position="e*0.5" size="e*0.25,40*f" zPosition="1" transparent="1" 
+			position="e*0.5,0" size="e*0.25,40*f" zPosition="1" transparent="1" 
 			font="Regular;20*f" halign="center" valign="center"/>
 		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" backgroundColor="key_yellow"
-			position="e*0.5" size="e*0.25,40*f" zPosition="1" transparent="1" 
+			position="e*0.5,0" size="e*0.25,40*f" zPosition="1" transparent="1" 
 			font="Regular;20*f" halign="center" valign="center"/>
 
 		<!-- Blue button text -->
@@ -370,7 +370,7 @@
 			position="e*0.75,0" size="e*0.25,40*f" zPosition="1" transparent="1" 
 			font="Regular;20*f" halign="center" valign="center"/>
 		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" backgroundColor="key_blue"
-			position="e*0.75" size="e*0.25,40*f" zPosition="1" transparent="1" 
+			position="e*0.75,0" size="e*0.25,40*f" zPosition="1" transparent="1" 
 			font="Regular;20*f" halign="center" valign="center"/>
 	</screen>
 
