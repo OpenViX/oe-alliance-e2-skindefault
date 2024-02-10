@@ -308,6 +308,72 @@
 		<panel name="__VKeyIconPanel__"/>
 	</screen>
 
+	<screen name="__DynamicColorButtonTemplate__">
+		<!-- red graphic -->
+		<widget objectTypes="key_red,StaticText,Boolean" source="key_red" render="Pixmap" pixmap="buttons/red.svg" 
+			position="0,0" size="e*0.25,40*f" alphatest="blend" transparent="1" backgroundColor="key_red" scale="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<ePixmap objectTypes="key_red,Button,Label" pixmap="buttons/red.svg" backgroundColor="key_red"
+			position="0,0" size="e*0.25,40*f" alphatest="blend" transparent="1" scale="1"/>
+
+		<!-- green graphic -->
+		<widget objectTypes="key_green,StaticText,Boolean" source="key_green" render="Pixmap" pixmap="buttons/green.svg" 
+			position="e*0.25,0" size="e*0.25,40*f" alphatest="blend" transparent="1" backgroundColor="key_green" scale="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<ePixmap objectTypes="key_green,Button,Label" pixmap="buttons/green.svg" backgroundColor="key_green"
+			position="e*0.25,0" size="e*0.25,40*f" alphatest="blend" transparent="1" scale="1"/>
+
+		<!-- yellow graphic -->
+		<widget objectTypes="key_yellow,StaticText,Boolean" source="key_yellow" render="Pixmap" pixmap="buttons/yellow.svg" 
+			position="e*0.5,0" size="e*0.25,40*f" alphatest="blend" transparent="1" backgroundColor="key_yellow" scale="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<ePixmap objectTypes="key_yellow,Button,Label" pixmap="buttons/yellow.svg" backgroundColor="key_yellow"
+			position="e*0.5,0" size="e*0.25,40*f" alphatest="blend" transparent="1" scale="1"/>
+
+		<!-- blue graphic -->
+		<widget objectTypes="key_blue,StaticText,Boolean" source="key_blue" render="Pixmap" pixmap="buttons/blue.svg"
+			position="e*0.75,0" size="e*0.25,40*f" alphatest="blend" transparent="1" backgroundColor="key_blue" scale="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<ePixmap objectTypes="key_blue,Button,Label" pixmap="buttons/blue.svg" backgroundColor="key_blue"
+			position="e*0.75,0" size="e*0.25,40*f" alphatest="blend" transparent="1" scale="1"/>
+
+		<!-- Red button text -->
+		<widget objectTypes="key_red,Label,Button" name="key_red" backgroundColor="key_red"
+			position="0,0" size="e*0.25,40*f" zPosition="1" transparent="1" 
+			font="Regular;20*f" halign="center" valign="center"/>
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" backgroundColor="key_red" 
+			position="0,0" size="e*0.25,40*f" zPosition="1" transparent="1" 
+			font="Regular;20*f" halign="center" valign="center"/>
+
+		<!-- Green button text -->
+		<widget objectTypes="key_green,Label,Button" name="key_green" backgroundColor="key_green"
+			position="e*0.25,0" size="e*0.25,40*f" zPosition="1" transparent="1" 
+			font="Regular;20*f" halign="center" valign="center"/>
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" backgroundColor="key_green"
+			position="e*0.25,0" size="e*0.25,40*f" zPosition="1" transparent="1" 
+			font="Regular;20*f" halign="center" valign="center"/>
+
+		<!-- Yellow button text -->
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" backgroundColor="key_yellow"
+			position="e*0.5" size="e*0.25,40*f" zPosition="1" transparent="1" 
+			font="Regular;20*f" halign="center" valign="center"/>
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" backgroundColor="key_yellow"
+			position="e*0.5" size="e*0.25,40*f" zPosition="1" transparent="1" 
+			font="Regular;20*f" halign="center" valign="center"/>
+
+		<!-- Blue button text -->
+		<widget objectTypes="key_blue,Label,Button" name="key_blue" backgroundColor="key_blue"
+			position="e*0.75,0" size="e*0.25,40*f" zPosition="1" transparent="1" 
+			font="Regular;20*f" halign="center" valign="center"/>
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" backgroundColor="key_blue"
+			position="e*0.75" size="e*0.25,40*f" zPosition="1" transparent="1" 
+			font="Regular;20*f" halign="center" valign="center"/>
+	</screen>
+
 	<screen name="__KeyTextAutoTemplate__"><!-- show with e.g. Components.Sources.Boolean -->
 		<widget source="key_text" conditional="key_text" render="Pixmap" pixmap="buttons/key_text.png" alphatest="blend" position="5*f,e-34*f" 
 			size="35*f,25*f" transparent="1" scale="1">
