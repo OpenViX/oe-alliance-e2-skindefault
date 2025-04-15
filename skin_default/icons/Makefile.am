@@ -11,9 +11,10 @@ dist_install_DATA = \
     backward.png \
     blank.png \
     bullet.png \
+    catchup.png \
     clock.png \
-	collection.png \
-	cutting.svg \
+    collection.png \
+    cutting.svg \
     dish_scan.png \
     dish.png \
     dot.png \
