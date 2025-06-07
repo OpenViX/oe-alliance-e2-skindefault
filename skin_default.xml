@@ -1330,11 +1330,6 @@
 			<convert type="ServiceInfo">HasHBBTV</convert>
 		</widget>
 	</screen>
-	<!-- Streaming Clients Info screen -->
- 	<screen name="StreamingClientsInfo" position="fill" flags="wfNoBorder">
-		<panel name="__PigTemplate__"/>
- 		<panel name="__ScrollLabelTemplate__"/>
- 	</screen>
 	<screen name="NetworkSetPassword" position="fill" flags="wfNoBorder" backgroundColor="transparent"><!-- not used by OpenViX -->
 		<panel name="__PigTemplate__"/>
 		<widget name="passwd" position="10*f,82*f" size="660*f,36*f" font="Bold;20*f" transparent="0" zPosition="1"/>
