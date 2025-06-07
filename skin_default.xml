@@ -1300,11 +1300,6 @@
 		<widget source="TranslationInfo" render="Label" position="10*f,192*F" size="660*f,460*f" font="Regular;18*f" halign="center" backgroundColor="background" 
 			transparent="1"/>
 	</screen>
-	<screen name="SystemMemoryInfo" flags="wfNoBorder" position="fill">
-		<panel name="__PigTemplate__"/>
-		<panel name="__TeamTemplate__"/>
-		<panel name="__AboutScrollLabelTemplate__"/>
-	</screen>
 	<screen name="SystemNetworkInfo" flags="wfNoBorder" position="fill">
 		<panel name="__PigTemplate__"/>
 		<panel name="__AboutScrollLabelTemplate__"/>
