@@ -2041,12 +2041,16 @@ self.autoResize()
 		<widget name="booklist" position="15*f,386*f" size="660*f,275*f" itemHeight="25*f" font="Regular;20*f" zPosition="2" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="MessageBox" position="fill" flags="wfNoBorder">
+		<panel name="MessageBoxFallback"/>
+	</screen>
+	<screen name="MessageBoxFallback" position="fill" flags="wfNoBorder">
 		<panel name="__PigTemplate__"/>
 		<widget name="text" position="70*f,82*f" size="600*f,510*f" font="Regular;22*f"/>
-		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="10*f,82*f" size="53*f,53*f" alphatest="blend"/>
-		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="10*f,82*f" size="53*f,53*f" alphatest="blend"/>
-		<widget name="WarningPixmap" pixmap="icons/input_warning.png" position="10*f,82*f" size="53*f,53*f" alphatest="blend"/>
-		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="10*f,82*f" size="53*f,53*f" alphatest="blend"/>
+		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="10*f,82*f" size="53*f,53*f" alphatest="blend" conditional="icon" scale="1" transparent="1" />
+		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="10*f,82*f" size="53*f,53*f" alphatest="blend" conditional="ErrorPixmap"/>
+		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="10*f,82*f" size="53*f,53*f" alphatest="blend" conditional="QuestionPixmap"/>
+		<widget name="WarningPixmap" pixmap="icons/input_warning.png" position="10*f,82*f" size="53*f,53*f" alphatest="blend" conditional="WarningPixmap"/>
+		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="10*f,82*f" size="53*f,53*f" alphatest="blend" conditional="InfoPixmap"/>
 		<!-- widget name="list" position="695*f,410*f" size="575*f,234*f" itemHeight="26*f" font="Regular;20*f" scrollbarMode="showOnDemand"/ -->
 		<widget name="list" position="10*f,650*f" size="660*f,0" itemHeight="26*f" font="Regular;20*f" scrollbarMode="showOnDemand"/>
 		<applet type="onLayoutFinish">
@@ -2072,9 +2076,11 @@ if self.type == self.TYPE_YESNO:
 	<screen name="MessageBoxSimple" position="center,center" size="640*f,10*f" zPosition="10" flags="wfNoBorder">
 		<widget source="Title" render="Label" position="2*f,2*f" size="400*f,20*f" zPosition="1" font="Regular;18*f" valign="center" halign="left"/><!-- No title shown -->
 		<widget name="text" position="66*f,8*f" size="520*f,0" font="Regular;22*f" zPosition="2"/>
-		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="10*f,10*f" size="53*f,53*f" zPosition="2" alphatest="blend" scale="1"/>
-		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="10*f,10*f" size="53*f,53*f" zPosition="2" alphatest="blend" scale="1"/>
-		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="10*f,10*f" size="53*f,53*f" zPosition="2" alphatest="blend" scale="1"/>
+		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="10*f,10*f" size="53*f,53*f" zPosition="2" alphatest="blend" conditional="icon" scale="1" transparent="1" />
+		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="10*f,10*f" size="53*f,53*f" zPosition="2" alphatest="blend" scale="1" conditional="ErrorPixmap"/>
+		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="10*f,10*f" size="53*f,53*f" zPosition="2" alphatest="blend" scale="1" conditional="QuestionPixmap"/>
+		<widget name="WarningPixmap" pixmap="icons/input_warning.png" position="10*f,10*f" size="53*f,53*f" zPosition="2" alphatest="blend" scale="1" conditional="WarningPixmap"/>
+		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="10*f,10*f" size="53*f,53*f" zPosition="2" alphatest="blend" scale="1" conditional="InfoPixmap"/>/>
 		<widget name="list" position="100*f,100*f" size="480*f,0" itemHeight="25*f" font="Regular;20*f" zPosition="3"/>
 		<applet type="onLayoutFinish">
 from enigma import eSize, ePoint
@@ -2106,12 +2112,21 @@ wsize = (wsizex, wsizey + titleheight)
 self.instance.resize(eSize(*wsize))
 self[&quot;text&quot;].instance.move(ePoint(int(64*f), int(8*f + titleheight)))
 self[&quot;text&quot;].instance.resize(eSize(*textsize))
-self[&quot;ErrorPixmap&quot;].instance.move(ePoint(int(4*f), int(4*f + titleheight)))
-self[&quot;ErrorPixmap&quot;].instance.resize(eSize(int(53*f),int(53*f)))
-self[&quot;QuestionPixmap&quot;].instance.move(ePoint(int(4*f), int(4*f + titleheight)))
-self[&quot;QuestionPixmap&quot;].instance.resize(eSize(int(53*f),int(53*f)))
-self[&quot;InfoPixmap&quot;].instance.move(ePoint(int(4*f), int(4*f + titleheight)))
-self[&quot;InfoPixmap&quot;].instance.resize(eSize(int(53*f),int(53*f)))
+if &quot;ErrorPixmap&quot; in self:
+	self[&quot;ErrorPixmap&quot;].instance.move(ePoint(int(4*f), int(4*f + titleheight)))
+	self[&quot;ErrorPixmap&quot;].instance.resize(eSize(int(53*f),int(53*f)))
+if &quot;QuestionPixmap&quot; in self:
+	self[&quot;QuestionPixmap&quot;].instance.move(ePoint(int(4*f), int(4*f + titleheight)))
+	self[&quot;QuestionPixmap&quot;].instance.resize(eSize(int(53*f),int(53*f)))
+if &quot;WarningPixmap&quot; in self:
+	self[&quot;WarningPixmap&quot;].instance.move(ePoint(int(4*f), int(4*f + titleheight)))
+	self[&quot;WarningPixmap&quot;].instance.resize(eSize(int(53*f),int(53*f)))
+if &quot;InfoPixmap&quot; in self:
+	self[&quot;InfoPixmap&quot;].instance.move(ePoint(int(4*f), int(4*f + titleheight)))
+	self[&quot;InfoPixmap&quot;].instance.resize(eSize(int(53*f),int(53*f)))
+if &quot;icon&quot; in self:
+	self[&quot;icon&quot;].instance.move(ePoint(int(4*f), int(4*f + titleheight)))
+	self[&quot;icon&quot;].instance.resize(eSize(int(53*f),int(53*f)))
 if self.type == self.TYPE_YESNO:
 	listsize = (wsizex-6, lenlist)
 	self[&quot;list&quot;].instance.move(ePoint(3, int(wsizey - lenlist + titleheight - 3)))
