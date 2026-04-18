@@ -2043,6 +2043,7 @@ self.autoResize()
 	<screen name="MessageBox" position="fill" zPosition="100" flags="wfNoBorder">
 		<panel name="MessageBoxFallback"/>
 	</screen>
+	<!-- MessageBoxFallback, used when the current GUI skin has a missing widget from icon, list, text -->
 	<screen name="MessageBoxFallback" position="fill" zPosition="100" flags="wfNoBorder">
 		<panel name="__PigTemplate__"/>
 		<widget name="text" position="70*f,82*f" size="600*f,510*f" font="Regular;22*f"/>
