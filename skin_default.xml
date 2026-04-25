@@ -2041,10 +2041,6 @@ self.autoResize()
 		<widget name="booklist" position="15*f,386*f" size="660*f,275*f" itemHeight="25*f" font="Regular;20*f" zPosition="2" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="MessageBox" position="fill" zPosition="100" flags="wfNoBorder">
-		<panel name="MessageBoxFallback"/>
-	</screen>
-	<!-- MessageBoxFallback, used when the current GUI skin has a missing widget from icon, list, text -->
-	<screen name="MessageBoxFallback" position="fill" zPosition="100" flags="wfNoBorder">
 		<panel name="__PigTemplate__"/>
 		<widget name="text" position="70*f,82*f" size="600*f,510*f" font="Regular;22*f"/>
 		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="10*f,82*f" size="53*f,53*f" alphatest="blend" conditional="icon" scale="1" transparent="1" />
@@ -2836,9 +2832,10 @@ self.instance.move(ePoint(int(orgpos.x() + (orgwidth - newwidth) // 2), int(orgp
 		<panel name="__WizardTemplate__"/>
 		<panel name="__FullscreenTitlePanel__"/>
 		<widget name="text" position="150*f,140*f" size="730*f,250*f" font="Regular;23*f" transparent="1" foregroundColor="window-fg" backgroundColor="black"/>
-		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="100*f,140*f" size="53*f,53*f" scale="1" alphatest="blend"/>
-		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="100,140*f" size="53*f,53*f" scale="1" alphatest="blend"/>
-		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="100*f,140*f" size="53*f,53*f" scale="1" alphatest="blend"/>
+		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="100*f,140*f" size="53*f,53*f" alphatest="blend" conditional="icon" scale="1" transparent="1" />
+		<widget name="ErrorPixmap" conditional="ErrorPixmap" pixmap="icons/input_error.png" position="100*f,140*f" size="53*f,53*f" scale="1" alphatest="blend"/>
+		<widget name="QuestionPixmap" conditional="QuestionPixmap" pixmap="icons/input_question.png" position="100,140*f" size="53*f,53*f" scale="1" alphatest="blend"/>
+		<widget name="InfoPixmap" conditional="InfoPixmap" pixmap="icons/input_info.png" position="100*f,140*f" size="53*f,53*f" scale="1" alphatest="blend"/>
 		<widget name="list" position="150*f,400*f" size="730*f,220*f" transparent="1" backgroundColor="black"/>
 		<widget name="rc" pixmap="rc.png" position="950*f,140*f" zPosition="10" size="154*f,500*f" transparent="0" scale="1" alphatest="blend"/>
 	</screen>
